@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+ 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title layout:title-pattern="$DECORATOR_TITLE-$CONTENT_TITLE"></title>
+    <!-- <title>Role</title> -->
+    
+    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}">
+  	<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css}" /> 
+
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" th:href="@{css/fragmentCSS/custom.css}" />
+    <link rel="stylesheet" th:href="@{css/fragmentCSS/line.css}" />
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/fragmentCSS/style.css}"> 
+     
+	<script th:src="@{js/metisMenu.min.js}"></script>
+	<script th:src="@{js/custom.js}"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script> 
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+	<!-- <script th:src="@{/js/system/popper.min.js}"></script> -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--   	<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script> -->
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body>
+  
+	<div id="wrapper">  
+		<th:block  th:replace="fragments/header :: header">Header</th:block>
+    	<th:block  th:replace="fragments/sidebar :: sidebar">Header</th:block>  
+
+    <div layout:fragment="content">
+        <!-- ============================================================================ -->
+        <!-- This content is only used for static prototyping purposes (natural templates)-->
+        <!-- and is therefore entirely optional, as this markup fragment will be included -->
+        <!-- from "fragments/header.html" at runtime.                                     -->
+        <!-- ============================================================================ -->
+        <div id="page-wrapper">
+        	<div class="graphs">
+        		<h1>Static content for prototyping purposes only</h1>
+        	</div>
+        </div>    
+        </div>
+      </div>
+  </body>
+</html>
