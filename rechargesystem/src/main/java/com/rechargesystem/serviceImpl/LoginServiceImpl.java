@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rechargesystem.models.Login;
+import com.rechargesystem.models.UserLogin;
 import com.rechargesystem.service.LoginService;
 import com.rechargesytem.repository.LoginRepository;
 
@@ -16,12 +16,12 @@ public class LoginServiceImpl implements LoginService{
 	private LoginRepository loginRepository;
 	
 	@Override
-	public void saveLogin(Login login) {	
+	public void saveLogin(UserLogin login) {	
 		loginRepository.save(login);
 	}
 
 	@Override
-	public List<Login> getLoginDetails() {
+	public List<UserLogin> getLoginDetails() {
 		return  loginRepository.findAll();
 	}
 	

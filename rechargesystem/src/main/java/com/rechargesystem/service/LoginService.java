@@ -2,10 +2,10 @@ package com.rechargesystem.service;
 
 import java.util.List;
 
-import com.rechargesystem.models.Login;
+import com.rechargesystem.models.UserLogin;
 
 public interface LoginService {
-	public void saveLogin(Login login);
+	public void saveLogin(UserLogin login);
 	
-	public List<Login> getLoginDetails();
+	public List<UserLogin> getLoginDetails();
 }

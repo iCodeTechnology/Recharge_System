@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.rechargesystem.models.Login;
+import com.rechargesystem.models.UserLogin;
 import com.rechargesystem.service.LoginService;
 
 @Controller
@@ -26,7 +26,7 @@ public class RechargeSystemController {
 	public ModelAndView getLogin()
 	{
 		ModelAndView modelAndView = new ModelAndView();
-		List<Login> loginDetails = loginService.getLoginDetails();
+		List<UserLogin> loginDetails = loginService.getLoginDetails();
 		System.out.println(loginDetails);
 		modelAndView.setViewName("index");
 		return modelAndView;
