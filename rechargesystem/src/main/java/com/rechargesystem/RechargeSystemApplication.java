@@ -14,7 +14,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan(basePackages = {"com"})
 public class RechargeSystemApplication extends SpringBootServletInitializer{
 	public static void main(String[] args) {
-		System.out.println("This is for Test!!");
 		SpringApplication.run(RechargeSystemApplication.class, args);
 	}
 }
